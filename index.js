@@ -7,8 +7,6 @@ const serveStatic = require('serve-static');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-const getId = require('shortId').generate;
-
 app.use('/app', serveStatic('client'))
 
 io.on('connection', (socket) => {
