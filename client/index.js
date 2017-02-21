@@ -8,6 +8,7 @@ socket.on('ping11', function (data) {
   console.log(data);
   socket.emit('pong11', {
     serverTime: data.time,
-    clientTime: Date.now()
+    clientTime: Date.now(),
+    counter: data.counter
   });
 });
